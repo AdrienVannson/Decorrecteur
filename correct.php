@@ -109,7 +109,7 @@ function correctText ($text)
     for ($i=0; $i<mb_strlen($text); $i++) {
         $c = mb_substr($text, $i, 1);
 
-        if (in_array($c, [' ', ','])) {
+        if (in_array($c, [' ', ',', '.', '\'', '"', '!', '?', ';', ':', '(', ')'])) {
             $res .= correctWord($word) . $c;
             $word = "";
         }
