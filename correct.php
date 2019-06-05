@@ -10,7 +10,7 @@ function initLexique ()
 {
     global $phonetics;
 
-    $file = fopen("Lexique383.txt", "r");
+    $file = fopen("Lexique383", "r");
     fgets($file); // Ignore the first line
 
     while ($line = fgets($file)) {
