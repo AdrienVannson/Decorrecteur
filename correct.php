@@ -72,8 +72,11 @@ function correctWord ($word)
 {
     global $phonetics, $spellings;
 
-    $word = strtolower($word);
-    $phonetic = $phonetics[$word];
+    if (!isset($phonetics[strtolower($word)])) {
+        return $word;
+    }
+
+    $phonetic = $phonetics[strtolower($word)];
 
     $res = "";
 
@@ -90,6 +93,10 @@ function correctWord ($word)
         $res = $res . $possibilites[ rand(0, count($possibilites)-1) ];
     }
 
+    if (ctype_upper($word[0])) {
+        $res[0] = strtoupper($res[0]);
+    }
+
     return $res;
 }
 
@@ -97,11 +104,21 @@ function correctText ($text)
 {
     $res = '';
 
-    $words = explode(' ', $text);
+    $word = "";
 
-    foreach ($words as $word) {
-        $res .= correctWord($word) . ' ';
+    for ($i=0; $i<mb_strlen($text); $i++) {
+        $c = mb_substr($text, $i, 1);
+
+        if (in_array($c, [' ', ','])) {
+            $res .= correctWord($word) . $c;
+            $word = "";
+        }
+        else {
+            $word .= $c;
+        }
     }
+
+    $res .= correctWord($word);
 
     return $res;
 }
