@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <title>Décorrecteur orthographique</title>
     <meta charset="UTF-8">
@@ -13,6 +13,10 @@
     <nav>
         <div class="nav-wrapper blue">
             <a href="#" class="brand-logo center">Décorrecteur orthographique</a>
+
+            <ul id="nav-mobile" class="hide-on-med-and-down right">
+                <li><a class="modal-trigger" href="#about">À propos</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -45,6 +49,29 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="modal" id="about">
+        <div class="modal-content">
+            <h2>À propos</h2>
+            <p>
+                <em>Décorrecteur orthographique</em> est un outil permettant d'ajouter de nombeuses
+                fautes d'ortographe à un texte initialement correct.<br/>
+
+                Il est entièrement open-source (licence MIT):
+                <a href="https://github.com/AdrienVannson/Decorrecteur">https://github.com/AdrienVannson/Decorrecteur</a>
+                <br/>
+
+                Pour fonctionner, <em>Décorrecteur orthographique</em> utilise la base de données
+                <em>Lexique383</em>.
+            </p>
+
+            <p>Créé par Adrien VANNSON (contact: <a href="mailto:adrien.vannson@protonmail.com">adrien.vannson@protonmail.com</a>)</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="modal-action modal-close waves-effect waves-red btn-flat">Fermer</a>
         </div>
     </div>
 

@@ -13,3 +13,7 @@ function correct ()
     request.open('GET', 'correct.php?text='+encodeURI(text), true);
     request.send(null);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    M.Modal.init(document.getElementById('about'), {});
+});
