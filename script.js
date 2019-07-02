@@ -10,7 +10,7 @@ function correct ()
         }
     };
 
-    request.open('GET', 'correct.php?text='+encodeURI(text), true);
+    request.open('GET', 'correct.php?text='+encodeURIComponent(text), true);
     request.send(null);
 }
 
