@@ -1,3 +1,3 @@
-# Decorrecteur orthographique
+# Décorrecteur orthographique
 
-*Décorrecteur orthographique* est un outil en ligne permettant d'ajouter de nombeuses fautes d'ortographe à un texte initialement correct.
+*Décorrecteur orthographique* est un outil en ligne permettant d'ajouter de nombreuses fautes d'orthographe à un texte initialement correct.
